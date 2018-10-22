@@ -1,0 +1,63 @@
+
+/* ROOT */
+:root {
+    --main : #393e46;
+    --secondary: #00adb5;
+    --light: #eeeeee;
+    --dark: #222831;
+}
+@font-face {
+    font-family: 'mali';
+    src: url(../fonts/Mali-Regular.ttf)
+}
+html, body, .canvas-container {
+    font-family: mali;
+    padding: 0;
+    margin: 0;
+    height:100%;
+    width:100%;
+}
+
+canvas {
+    outline: 1px solid black;
+}
+
+
+/* nav */
+.navs {
+    height: 50px;
+    text-align: center;
+    width: 50vw;
+    left: 25vw;
+    background-color: var(--main);
+    color: var(--secondary);
+}
+
+
+/* inputs */
+input[type=color] {
+    margin:0;
+    padding:0;
+    border:none;
+    outline:none;
+    background:none;
+}
+
+
+
+/* HELPERS */
+.absulute {
+    position: absolute;
+}
+.fixed {
+    position: fixed;
+}
+.flex {
+    position: flex;
+}
+.flex-column {
+    flex-direction: column;
+}
+.align-center {
+    align-items: center;
+}

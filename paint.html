@@ -4,10 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
     <title>Document</title>
 </head>
 <body>
-    
+<section class="flex flex-column align-center fixed navs">
+    <header >
+        THIS IS THE HEADER
+    </header>
+
+    <nav class="flex">
+        <input id="brush-color" onchange="udpateBrushColor(this.value)" type="color">
+        <input id="canvas-color" onchange="updateFillColor(this.value)" type="color">
+
+        <select onchange="updateBrushStyle(this.value)">
+            <option value="rect">Rectanlge</option>
+            <option value="triangle">Triangle</option>
+            <option value="circle">Circle</option>
+        </select>
+
+        <button onclick="onClearCanvas()">clear</button>
+        <button>save</button>
+    </nav>
+</section>
+
+    <div class="canvas-container">      
+        <canvas id="c">UPDATE YOUR BROWSER YOU LITTLE PIECE OF</canvas>
+    </div>
 
     <script src="js/paint-service.js"></script>
     <script src="js/paint-controller.js"></script>
