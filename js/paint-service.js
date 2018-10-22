@@ -1,6 +1,6 @@
 var gSets = {
     brushStyle:'rect',
-    color: '#000000s',
+    color: '#000000',
     bgColor: '#ffffff',
     currPos: {},
     prevPos: {},
@@ -8,7 +8,6 @@ var gSets = {
 }
 
 function updateCurrPos(ev) {
-    if(!gSets.isDown) return;
     gSets.prevPos = gSets.currPos;
     //sets the new position
     ev = ev || window.event;
@@ -17,7 +16,10 @@ function updateCurrPos(ev) {
         y:ev.clientY
     }
     gSets.currPos = currPos;
-    // if(!gSets.prevPos.x) gSets.prevPos = currPos;
+    //return if the mouse is not clicked
+    if(!gSets.isDown) return;
+
+    //if mouse is clicked, paint
     useBrush();        
 }
 

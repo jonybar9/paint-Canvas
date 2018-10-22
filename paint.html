@@ -24,7 +24,9 @@
         </select>
 
         <button onclick="onClearCanvas()">clear</button>
-        <button>save</button>
+        <!-- <button onclick="downloadCanvas()">download</button> -->
+        <!-- <a href="javascript:canvas.toDataURL('image/jpeg');" download="download" >Download</a> -->
+        <a id="download" download="myCanvas.png"><button type="button" onclick="downloadCanvas(event)">Download</button></a>
     </nav>
 </section>
 
